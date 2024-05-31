@@ -2,6 +2,7 @@
 
 License found in the LICENSE file in the root directory
 of this source tree. -->
+
 # WhatsApp Chat Proxy
 
 [<img alt="github" src="https://img.shields.io/badge/github-WhatsApp/proxy-8da0cb?style=for-the-badge&labelColor=555555&logo=github" height="20">](https://github.com/WhatsApp/proxy)
@@ -104,7 +105,7 @@ Depending on the scenario in which you utilize your proxy, the proxy container e
 1. 80: Standard web traffic (HTTP)
 2. 443: Standard web traffic, encrypted (HTTPS)
 3. 5222: Jabber protocol traffic (WhatsApp default)
-4. 587 or 7777: *.whatsapp.net traffic including media (HTTPS)
+4. 587 or 7777: \*.whatsapp.net traffic including media (HTTPS)
 
 There are also ports configured which accept incoming [proxy headers](https://www.haproxy.com/blog/use-the-proxy-protocol-to-preserve-a-clients-ip-address/) (version 1 or 2)
 on connections. If you have a network load balancer you can preserve the client IP address if you want.
@@ -117,8 +118,8 @@ on connections. If you have a network load balancer you can preserve the client 
 
 Ports 443 and 8443 are protected by a self-signed encryption certificate generated at container start time. There are some custom options should you wish to tweak the settings of the generated certificates
 
-* `SSL_DNS` comma separate list of alternative hostnames, no default
-* `SSL_IP` comma separate list of alternative IPs, no default
+- `SSL_DNS` comma separate list of alternative hostnames, no default
+- `SSL_IP` comma separate list of alternative IPs, no default
 
 They can be set with commands like
 
@@ -148,7 +149,7 @@ When you are ready to run the container as a service, do\*:
 docker compose -f /path/to/this/repo/docker-compose.yml up -d
 ```
 
-*\*Note the `-d` flag which means "daemonize" and run as a service.*
+_\*Note the `-d` flag which means "daemonize" and run as a service._
 
 To stop the container you can similarly do:
 
@@ -175,7 +176,7 @@ systemctl start docker_boot.service
 docker ps
 ```
 
-*\*Make sure to update the path to your specific `docker-compose.yml` file in the service definition `docker_boot.service`*
+_\*Make sure to update the path to your specific `docker-compose.yml` file in the service definition `docker_boot.service`_
 
 ## Kubernetes deployment
 
@@ -185,7 +186,7 @@ Read more about other type of deployments [here](/docs/deployments.md).
 
 # Contributors
 
-------------
+---
 
 The authors of this code are Sean Lawlor ([@slawlor](https://github.com/slawlor)).
 
@@ -193,6 +194,6 @@ To learn more about contributing to this project, [see this document](https://gi
 
 # License
 
-------------
+---
 
 This project is licensed under [MIT](https://github.com/novifinancial/akd/blob/main/LICENSE-MIT).
